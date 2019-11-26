@@ -1,0 +1,23 @@
+server:
+  port: 7010
+
+spring:
+  application:
+    name: learn-config
+  #profiles:
+  #  active: native
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/CoderUDream/server-config
+
+#eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
