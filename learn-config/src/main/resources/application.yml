@@ -11,7 +11,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/CoderUDream/server-config
+          uri: https://github.com/CoderUDream/learn-spring-cloud/tree/master/learn-config/src/main/resources
 
 #eureka
 eureka:
