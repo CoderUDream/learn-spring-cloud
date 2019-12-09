@@ -6,13 +6,13 @@ spring:
     name: learn-config
   #profiles:
   #  active: native
-
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/CoderUDream/learn-spring-cloud/tree/master/learn-config/src/main/resources
-
+          uri: https://github.com/CoderUDream/learn-spring-cloud
+          default-label: master
+          search-paths: learn-config/src/main/resources
 #eureka
 eureka:
   client:
