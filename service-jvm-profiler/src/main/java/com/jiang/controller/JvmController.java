@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -18,6 +19,7 @@ public class JvmController {
 
 
     ExecutorService threadPool = Executors.newFixedThreadPool(2);
+    List<OOMObject> surList = new ArrayList<>(1024);
 
     class OOMObject {
         // 1k
@@ -27,13 +29,23 @@ public class JvmController {
     @GetMapping("/heap")
     public String heap() {
         threadPool.submit(() -> {
-            List<Object> list = new ArrayList();
+            List<OOMObject> list = new ArrayList();
+            Random random = new Random();
             try {
                 while (true) {
                     list.add(new OOMObject());
+                    // 大于1M释放
+                    if (list.size() > 500) {
+                        if (random.nextInt(50) > 45) {
+                            surList.addAll(list);
+                        }
+
+                        list.clear();
+                        Thread.sleep(1000);
+                    }
                 }
             } catch (Exception e) {
-                System.out.println("out of memory: " + e.toString());
+                System.out.println("exception: " + e.toString());
             }
         });
 
