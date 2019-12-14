@@ -6,7 +6,6 @@
         <groupId>com.jiang</groupId>
         <artifactId>learn-spring-cloud</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>service-outward</artifactId>
