@@ -34,7 +34,7 @@ public class JvmController {
             try {
                 while (true) {
                     list.add(new OOMObject());
-                    // 大于1M释放
+                    // 大于0.5M释放
                     if (list.size() > 500) {
                         if (random.nextInt(50) > 45) {
                             surList.addAll(list);
