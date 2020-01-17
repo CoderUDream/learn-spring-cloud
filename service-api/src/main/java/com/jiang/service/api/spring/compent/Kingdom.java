@@ -1,6 +1,7 @@
 package com.jiang.service.api.spring.compent;
 
 import com.jiang.service.api.spring.service.IGarden;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +14,12 @@ import javax.annotation.PostConstruct;
  */
 @Slf4j
 @Component
+@Data
 public class Kingdom implements InitializingBean {
 
     private IGarden garden;
+
+    private String name;
 
     Kingdom() {
       log.info("Kingdom constructor...");
@@ -36,7 +40,8 @@ public class Kingdom implements InitializingBean {
         return garden.toString();
     }
 
-    public void setGarden(IGarden garden) {
-        this.garden = garden;
+    @Override
+    public String toString() {
+        return "garden:" + garden + ", name:" + name;
     }
 }

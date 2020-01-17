@@ -18,18 +18,6 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class GardenDesigner implements BeanPostProcessor {
 
-//    @Override
-//    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-//        String[] names = beanFactory.getBeanDefinitionNames();
-//        for (String name : names) {
-//            if ("Kingdom".equalsIgnoreCase(name)) {
-//                BeanDefinition bd = beanFactory.getBeanDefinition(name);
-//                log.info(bd.toString());
-//            }
-//        }
-//    }
-
-
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if ("Kingdom".equalsIgnoreCase(beanName)) {
@@ -40,6 +28,6 @@ public class GardenDesigner implements BeanPostProcessor {
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        return null;
+        return bean;
     }
 }
