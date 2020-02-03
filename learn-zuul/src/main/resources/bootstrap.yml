@@ -1,0 +1,13 @@
+server:
+  port: 8020
+
+spring:
+  application:
+    name: service-zuul
+
+  cloud:
+    config:
+      name: ${spring.application.name}
+      label: master
+      uri: http://localhost:7010/
+      profile: ${spring.profiles.active:dev}

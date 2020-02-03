@@ -25,6 +25,7 @@
     <modules>
         <module>learn-config</module>
         <module>learn-eureka</module>
+        <module>learn-zuul</module>
         <module>service-api</module>
         <module>service-outward</module>
         <module>service-jvm-profiler</module>
