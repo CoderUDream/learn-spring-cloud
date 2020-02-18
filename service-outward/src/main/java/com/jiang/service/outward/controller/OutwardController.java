@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author liyujiang
  * @date 2019/11/20 18:09
- * @Description
+ * @Description 对外
  */
 @RestController
 @RequestMapping("/outward")
