@@ -9,5 +9,5 @@ public class EurekaApplicationConstant {
     /**
      * service-api
      */
-    public static final String SERVICE_API = "service-api";
+    public static final String SERVICE_API = "SERVICE-API";
 }

@@ -19,6 +19,6 @@ public class OutwardController {
 
     @RequestMapping("/getSwaggerName")
     public String getSwaggerName() {
-        return apiService.getSwaggerName();
+        return apiService.getSwaggerName("jiang");
     }
 }

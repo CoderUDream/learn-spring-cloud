@@ -14,11 +14,11 @@ spring:
   application:
     name: service-outward
 
-  cloud:
-    config:
-      name: ${spring.application.name}
-      label: master
-      profile: ${spring.profiles.active:dev}
-      discovery:
-        enabled: true
-        service-id: learn-config
+#  cloud:
+#    config:
+#      name: ${spring.application.name}
+#      label: master
+#      profile: ${spring.profiles.active:dev}
+#      discovery:
+#        enabled: true
+#        service-id: learn-config
