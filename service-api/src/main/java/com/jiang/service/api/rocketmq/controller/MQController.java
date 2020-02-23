@@ -23,7 +23,7 @@ public class MQController {
     @Autowired
     RocketMQConsumerService mqConsumerService;
 
-    @RequestMapping("/aysncSend")
+    @RequestMapping("/asyncSend")
     public String rocketSend() throws Exception {
         mqProducerService.asyncSend();
         return "success";
