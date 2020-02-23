@@ -10,6 +10,8 @@ import java.util.Scanner;
 
 /**
  * Created by liyujiang on 2019/12/21.
+ *
+ * 用于测试
  */
 @Slf4j
 public class SpringStarter {
