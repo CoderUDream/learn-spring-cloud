@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -19,6 +20,7 @@ import java.util.Objects;
 @Slf4j
 @Configuration
 public class AnimalLifeCycle {
+
     class Dog implements InitializingBean, DisposableBean {
 
         public Dog() {
@@ -34,6 +36,7 @@ public class AnimalLifeCycle {
         public void afterPropertiesSet() throws Exception {
             log.info("dog afterPropertiesSet...");
         }
+
 
 
         public void init() {

@@ -5,11 +5,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
+
+import java.util.Scanner;
+import java.util.concurrent.locks.ReentrantLock;
 
 @EnableHystrix
 @EnableDiscoveryClient
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.jiang.service.api.hystrix"})
+@ComponentScan(basePackages = {"com.jiang.service.api.redis"})
+//@ComponentScan(excludeFilters = {@ComponentScan.Filter(type = FilterType.ASPECTJ, pattern = "com.jiang.service.api.hystrix.*")})
 public class ServiceApiApplication {
 
     public static void main(String[] args) {

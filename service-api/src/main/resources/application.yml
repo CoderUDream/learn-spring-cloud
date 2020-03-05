@@ -1,0 +1,6 @@
+#Redis配置
+spring:
+  redis:
+    host: 106.52.124.74
+    port: 6379
+    database: 0
