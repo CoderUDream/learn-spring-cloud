@@ -19,8 +19,8 @@
      -->
 
     <Properties>
-        <Property name="fileName">logs/service-api</Property>
-        <Property name="fileGz">/logs/service-api/7z</Property>
+        <Property name="fileName">logs/service-mysql</Property>
+        <Property name="fileGz">/logs/service-mysql/7z</Property>
         <Property name="PID">????</Property>
         <Property name="LOG_EXCEPTION_CONVERSION_WORD">%xwEx</Property>
         <Property name="REQUEST_ID">%X{requestId}</Property>

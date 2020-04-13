@@ -9,9 +9,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>service-sharding-jdbc</artifactId>
+    <artifactId>service-mysql</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>service-sharding-jdbc</name>
+    <name>service-mysql</name>
 
     <dependencies>
         <!--表示为web工程-->

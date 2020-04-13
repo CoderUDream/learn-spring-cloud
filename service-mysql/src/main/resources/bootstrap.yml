@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: service-sharding-jdbc
+    name: service-mysql
 
 #eureka
 eureka:
@@ -13,3 +13,4 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
+

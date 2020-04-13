@@ -19,8 +19,8 @@
      -->
 
     <Properties>
-        <Property name="fileName">logs</Property>
-        <Property name="fileGz">logs/7z</Property>
+        <Property name="fileName">logs/service-jvm-profiler</Property>
+        <Property name="fileGz">logs/service-jvm-profiler/7z</Property>
         <Property name="PID">????</Property>
         <Property name="LOG_EXCEPTION_CONVERSION_WORD">%xwEx</Property>
         <Property name="REQUEST_ID">%X{requestId}</Property>
