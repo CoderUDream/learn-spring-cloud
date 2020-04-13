@@ -1,12 +1,11 @@
 package com.jiang.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -16,7 +15,6 @@ import java.util.concurrent.Executors;
 @Slf4j
 @RestController
 public class JvmController {
-
 
     ExecutorService threadPool = Executors.newFixedThreadPool(2);
     List<OOMObject> surList = new ArrayList<>(1024);
@@ -56,4 +54,10 @@ public class JvmController {
     public String info() {
         return "jvm-profiler";
     }
+
+    @GetMapping("/io")
+    public String handleIO() {
+        return "";
+    }
+
 }

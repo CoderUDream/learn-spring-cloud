@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/service")
 public class ServiceController {
 
-    @Value("${swagger.name}")
+    @Value("${swagger.name:unknown}")
     private String name;
 
     @Autowired

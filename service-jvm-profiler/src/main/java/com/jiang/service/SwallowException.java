@@ -11,12 +11,14 @@ import java.util.concurrent.*;
  */
 @Slf4j
 class ExceptionThreadPool extends ThreadPoolExecutor {
-    public ExceptionThreadPool(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue) {
+    public ExceptionThreadPool(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit,
+        BlockingQueue<Runnable> workQueue) {
         super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue);
     }
 
     /**
      * 重写异常的处理回调方法，打印线程，不重写异常将不会被捕获
+     * 
      * @param r
      * @param t
      */
@@ -28,20 +30,15 @@ class ExceptionThreadPool extends ThreadPoolExecutor {
 
 @Slf4j
 public class SwallowException {
-    static ExecutorService executor = new ExceptionThreadPool(
-            5,
-            5,
-            0,
-            TimeUnit.SECONDS,
-            new SynchronousQueue<Runnable>());
-
+    static ExecutorService executor =
+        new ExceptionThreadPool(5, 5, 0, TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
 
     public static void main(String[] args) {
         executor.submit(new Worker());
-        //executor.shutdown();
+        // executor.shutdown();
 
-        //下面这种情况就不会吞噬异常，会打印出堆栈信息
-        //new Worker().run();
+        // 下面这种情况就不会吞噬异常，会打印出堆栈信息
+        // new Worker().run();
     }
 
     static class Worker implements Runnable {
