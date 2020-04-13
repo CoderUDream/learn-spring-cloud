@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: service-zuul
+
+swagger.name: learn-dev-new

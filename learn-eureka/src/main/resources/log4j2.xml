@@ -17,10 +17,9 @@
         hostName : 本地机器名
         hostAddress : 本地ip地址
      -->
-
     <Properties>
-        <Property name="fileName">logs</Property>
-        <Property name="fileGz">logs/7z</Property>
+        <Property name="fileName">logs/learn-eureka</Property>
+        <Property name="fileGz">logs/learn-eureka/7z</Property>
         <Property name="PID">????</Property>
         <Property name="LOG_EXCEPTION_CONVERSION_WORD">%xwEx</Property>
         <Property name="REQUEST_ID">%X{requestId}</Property>

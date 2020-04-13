@@ -25,10 +25,11 @@
     <modules>
         <module>learn-config</module>
         <module>learn-eureka</module>
-        <module>learn-service-api-provider</module>
+        <module>learn-zuul</module>
         <module>service-api</module>
         <module>service-outward</module>
         <module>service-jvm-profiler</module>
+        <module>service-sharding-jdbc</module>
     </modules>
 
     <dependencyManagement>
@@ -62,6 +63,13 @@
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

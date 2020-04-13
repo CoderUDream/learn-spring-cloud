@@ -1,0 +1,6 @@
+zuul:
+  routes:
+    api-a:
+      path: /outward/**
+      #serviceid: service-outward
+      server-provide.url: http://localhost:8020/zuul/**

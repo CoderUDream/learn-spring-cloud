@@ -9,7 +9,6 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.jiang</groupId>
 	<artifactId>service-jvm-profiler</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>service-jvm-profiler</name>

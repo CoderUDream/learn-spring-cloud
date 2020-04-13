@@ -1,3 +1,18 @@
 #eureka:
 #  client:
     #disable-delta: true
+feign:
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  client:
+    default-to-properties: true
+    default-config: default
+    # 这里会用默认的default的值去配置FeignClientConfiguration
+    # 可以给每一个FeignClient都配置不同的属性，当然也可在FeignClient的configuration的配置类中设置
+    # 这里用来修改默认配置较为合适 单个的FeignClient的配置类都到FeignConfiguration里面去
+    config: {SERVICE-API: {loggerLevel: 2, connectTimeout: 999, readTimeout: 222}, default: {connectTimeout: 10000, readTimeout: 6666}}
+
+  hystrix:
+    enabled: true
