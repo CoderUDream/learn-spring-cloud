@@ -29,7 +29,7 @@
         <module>service-api</module>
         <module>service-outward</module>
         <module>service-jvm-profiler</module>
-        <module>service-sharding-jdbc</module>
+        <module>service-mysql</module>
     </modules>
 
     <dependencyManagement>

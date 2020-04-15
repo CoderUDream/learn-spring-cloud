@@ -1,17 +1,21 @@
 package com.jiang.service.mysql;
 
+import com.jiang.service.mysql.entity.User;
+import com.jiang.service.mysql.mapper.UserMapper;
+import org.apache.ibatis.session.defaults.DefaultSqlSessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.ConfigurableApplicationContext;
 
-@EnableDiscoveryClient
+import java.util.List;
+
+//@EnableDiscoveryClient
 @SpringBootApplication
 public class StartApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StartApplication.class, args);
-
-
+        ConfigurableApplicationContext application = SpringApplication.run(StartApplication.class, args);
     }
 
 }

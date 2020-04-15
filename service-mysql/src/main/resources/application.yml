@@ -1,0 +1,43 @@
+server:
+  port: 9040
+
+## mybatis plus配置
+mybatis-plus:
+  global-config:
+    banner: false
+    db-config:
+      db-type: mysql
+      field-strategy: not_empty
+      id-type: auto
+    super-mapper-class: com.baomidou.mybatisplus.core.mapper.BaseMapper
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.jiang.service.mysql.entity
+
+## mybatis 配置
+
+## 多数据源
+spring:
+  datasource:
+    dynamic:
+      datasource:
+        master:
+          driver-class-name: com.mysql.jdbc.Driver
+          initialSize: 5
+          maxActive: 20
+          minIdle: 5
+          password: 123456
+          url: jdbc:mysql://106.52.124.74:3306/test?useSSL=false&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+          username: jagger
+        slave_1:
+          driver-class-name: com.mysql.jdbc.Driver
+          initialSize: 5
+          maxActive: 20
+          minIdle: 5
+          password: 123456
+          url: jdbc:mysql://106.52.124.74:3306/db_03?useSSL=false&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+          username: jagger
+
+## 设置日志级别
+logging:
+  level:
+    com.jiang.service.mysql.mapper: DEBUG
